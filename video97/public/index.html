@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate Data</title>
+</head>
+<body>
+  <h1>Generate Dummy Data</h1>
+  <button onclick="generateData()">Generate Data</button>
+  <div id="output"></div>
+
+  <script>
+    async function generateData() {
+      const res = await fetch("/generate-data", {
+        method: "POST",
+      });
+      const data = await res.json();
+       console.log(data);
+    }
+  </script>
+</body>
+</html>
